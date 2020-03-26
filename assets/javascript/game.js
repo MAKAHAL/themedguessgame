@@ -15,7 +15,7 @@ let computerChoice = numbers[randomNumber];
 
 console.log(computerChoice);
 
-var newGame = function() {
+let newGame = function() {
 	guessesLeft = 5;
     guessedNumbers = [];
 	let randomNumber = Math.floor(Math.random() * numbers.length);
@@ -37,13 +37,13 @@ document.onkeyup = function(event) {
       if (guessesLeft == 0) {
     	losses++;
     	document.getElementById("losses").innerHTML = losses;
-        alert("YOU LOST!")
+        alert("YOU LOST!");
     }
     
         if (userGuess == computerChoice) {
         	wins++;
         	document.getElementById("wins").innerHTML = wins;
-            alert("YOU WON!")
+            alert("YOU WON!");
             newGame();
       } else {
         console.log("Guess again!");
